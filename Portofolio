@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RICO - Front-End Designer Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+  <!-- Include GSAP ScrollTrigger Plugin -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html, body {
+      scroll-behavior: auto;
+    }
+    body {
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("https://img.freepik.com/premium-vector/vector-seamless-pattern-colored-baguette-bread_505913-3518.jpg") repeat;
+      opacity: 0.3;
+      z-index: -1;
+    }
+    #skip-text {
+      position: fixed;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1rem;
+      color: #fff;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 5px 10px;
+      border-radius: 5px;
+      z-index: 1000;
+    }
+    .hero {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+    }
+    .hero-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+    }
+    .hero-text {
+      position: relative;
+      padding: 20px 30px;
+      background-image: url("https://png.pngtree.com/png-clipart/20230624/original/pngtree-stylish-ripped-torn-paper-cardboard-texture-effect-png-image_9213176.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: #ff00ff;
+      font-family: 'Fira Code', monospace;
+      text-shadow: 2px 2px 0px black;
+    }
+    .hero-text .title {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      text-shadow: 4px 4px 0px black;
+    }
+    .hero-text .subtitle {
+      font-size: 1.5rem;
+    }
+    .hero-img {
+      width: 300px;
+      height: auto;
+      filter: brightness(0.85);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      visibility: hidden;
+    }
+    .about {
+      background: rgba(255, 255, 255, 0.85);
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      max-width: 800px;
+      text-align: center;
+    }
+    .about h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #ff6f61;
+    }
+    .about p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      color: #444;
+    }
+    .links {
+      text-align: center;
+      margin: 20px auto 60px;
+    }
+    .logo {
+      width: 70px;
+      margin: 20px;
+      transition: transform 0.3s ease;
+    }
+    .logo:hover {
+      transform: scale(1.1);
+    }
+    @media (max-width: 768px) {
+      .hero-content {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .hero-img {
+        width: 200px;
+      }
+      .hero-text {
+        padding: 15px 20px;
+      }
+      .hero-text .title {
+        font-size: 3rem;
+      }
+      .hero-text .subtitle {
+        font-size: 1.25rem;
+      }
+      .about, .links {
+        padding: 20px;
+      }
+      .about h2 {
+        font-size: 2rem;
+      }
+      .about p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body onload="window.scrollTo(0,0)">
+  <div id="skip-text">Press LMB to skip</div>
+  <section class="hero">
+    <div class="hero-content">
+      <img src="https://media.tenor.com/HvJ48-NOlfIAAAAi/teto-tetoris.gif" alt="Left GIF" class="hero-img">
+      <div class="hero-text">
+        <div class="title">RICO</div>
+        <div class="subtitle">Front-End Designer</div>
+      </div>
+      <img src="https://media.tenor.com/HvJ48-NOlfIAAAAi/teto-tetoris.gif" alt="Right GIF" class="hero-img">
+    </div>
+  </section>
+  <div class="container">
+    <section class="about">
+      <h2>About Me</h2>
+      <p>
+        Hello! I’m Frederico Sarren, a software engineering student at Tri Ratna School. I have a strong foundation in HTML, CSS, and GSAP, and I love using animations to create engaging interactions. (´｡• ᵕ •｡`) ♡
+      </p>
+    </section>
+    <section class="links">
+      <h2>Find Me Online</h2>
+      <a id="githubLink" href="https://github.com/felyRico" target="_blank">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" class="logo">
+      </a>
+    </section>
+  </div>
+  
+  <script>
+    document.body.style.overflow = 'hidden';
+    
+    gsap.set(".hero-text", { scale: 0.5, rotation: -10, x: -20 });
+    
+    var tl = gsap.timeline({delay: 0.25});
+    tl.to(".hero-text", { duration: 0, scale: 1, rotation: 10, x: 20 }, 0.5);
+    tl.to(".hero-text", { duration: 0, scale: 1.5, rotation: 0, x: 0 }, 1);
+    
+    function skipAnimation() {
+      tl.progress(1);
+      document.body.style.overflow = 'auto';
+      document.querySelector(".container").style.visibility = 'visible';
+      document.getElementById("skip-text").style.display = 'none';
+      document.removeEventListener('mousedown', onMouseDownSkip);
+    }
+    
+    function onMouseDownSkip(e) {
+      if (e.button === 0) {
+        skipAnimation();
+      }
+    }
+    
+    document.addEventListener('mousedown', onMouseDownSkip);
+    
+    tl.eventCallback("onComplete", function() {
+      document.body.style.overflow = 'auto';
+      document.querySelector(".container").style.visibility = 'visible';
+      document.getElementById("skip-text").style.display = 'none';
+      document.removeEventListener('mousedown', onMouseDownSkip);
+    });
+    
+    gsap.from(".hero-img", {
+      duration: 1.5,
+      opacity: 0,
+      scale: 0.5,
+      stagger: 0.2,
+      ease: "back.out(1.7)"
+    });
+    
+    gsap.from(".about", {
+      scrollTrigger: {
+        trigger: ".about",
+        start: "top 80%",
+        markers: true,
+        toggleActions: "play pause resume reset"
+      },
+      duration: 1,
+      x: -100,
+      opacity: 0,
+      ease: "power1.out"
+    });
+    
+    gsap.from(".links", {
+      duration: 1,
+      delay: 2,
+      y: 50,
+      opacity: 0,
+      ease: "power1.out"
+    });
+  </script>
+</body>
+</html>
