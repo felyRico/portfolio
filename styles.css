@@ -88,7 +88,6 @@
     filter: brightness(0.85);
   }
   
-  /* Container with About and Placeholder side-by-side */
   .container {
     display: flex;
     justify-content: space-between;
@@ -157,7 +156,7 @@
     background-image: url("https://static.vecteezy.com/system/resources/previews/048/027/196/original/ripped-transparent-paper-texture-png.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 30% 80%;
+    background-size: 35% 80%;
   }
   
   .skills h1 {
@@ -165,10 +164,9 @@
     margin-bottom: 15px;
     color: #ff6f61;
   }
-  
-  /* Buttons */
+
   .html-css-skill {
-    padding: 12px 24px;
+    padding: 10px 20px;
     background-color: #FF3662;
     color: #000;
     border: solid 2px #000;
@@ -205,7 +203,7 @@
   }
   
   .gsap-skill {
-    padding: 12px 24px;
+    padding: 10px 20px;
     background: linear-gradient(114.41deg, #39FF14 20.74%, #A4FF70 65.5%);
     color: #000;
     border: none;
@@ -269,5 +267,13 @@
     .about p, .placeholder p {
       font-size: 0.81rem;
     }
+    .skills{
+        background-size: 90% 80%;
+    }
+    .html-css-skill, .gsap-skill {
+      padding: 10px 20px;
+      font-size: 14px;
+    }
   }
+
   
