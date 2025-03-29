@@ -77,13 +77,14 @@ projectTl.to(".project-card", { duration: 0.3, scale: 1, rotation: 10, x: 20, op
 projectTl.to(".project-card", { duration: 0.3, scale: 1, rotation: 0, x: 0, stagger: 0.2 }, "-=0.2");
 
 
-gsap.from(".links", {
+gsap.from(".contacts", {
   duration: 1,
   delay: 2,
   y: 50,
   opacity: 0,
   ease: "power1.out"
 });
+
 document.querySelector(".gsap-skill").addEventListener("click", function() {
   gsap.fromTo(this, { rotation: 0 }, { rotation: 720, duration: 0.4, ease: "power2.out" });
 });
