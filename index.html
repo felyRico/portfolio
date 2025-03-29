@@ -6,10 +6,18 @@
   <title>RICO - Front-End Designer Portfolio</title>
   <link rel="icon" href="https://i.kym-cdn.com/entries/icons/facebook/000/001/130/Untitled.jpg" type="image/png">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/links.css">
+  
 </head>
 <body onload="window.scrollTo(0,0)">
   <div id="skip-text">Press LMB to skip</div>
+  
   <section class="hero">
     <div class="hero-content">
       <img src="https://media.tenor.com/HvJ48-NOlfIAAAAi/teto-tetoris.gif" alt="Left GIF" class="hero-img">
@@ -20,6 +28,7 @@
       <img src="https://media.tenor.com/HvJ48-NOlfIAAAAi/teto-tetoris.gif" alt="Right GIF" class="hero-img">
     </div>
   </section>
+  
   <div class="container">
     <section class="about">
       <h2>About Me</h2>
@@ -28,10 +37,11 @@
       </p>
     </section>
     <section class="placeholder">
-      <img src="https://static.wikia.nocookie.net/fanloid/images/5/51/Kasane_Pearto_Original.png/revision/latest/thumbnail/width/360/height/450?cb=20240829231831" alt="Placeholder Image">
-      <p>(Image not yet available)</p>
+      <img src="images/cool-photo.jpg" alt="Cool Photo">
+      <p>(Picture taken by Jolyn Horencia)</p>
     </section>
   </div>
+  
   <section class="skills">
     <h1>Skills</h1>
     <div class="skill-buttons">
@@ -39,12 +49,40 @@
       <button class="gsap-skill">GSAP</button>
     </div>
   </section>
+  
+  <section class="projects">
+    <h2>PROJECTS</h2>
+    <div class="project-list">
+      <div class="project-card" data-link="https://frico-anecdote.vercel.app/">
+        <img src="images/anecdote.png" alt="Project Image">
+        <h3>Anecdote</h3>
+        <p>Compilation of anecdotes themed around school life (they suck)</p>
+      </div>
+      <div class="project-card" data-link="https://rico-movie-collections-with-gsap-but-cooler.vercel.app/">
+        <img src="images/movie-collections.png" alt="Project Image">
+        <h3>Movie Collections</h3>
+        <p>Very bland, I know (might do some decoration)</p>
+      </div>
+      <div class="project-card" data-link="">
+        <img src="images/kasane-pearto.jpg" alt="Project Image">
+        <h3>Dummy</h3>
+        <p>This is a dummy project</p>
+      </div>
+      <div class="project-card" data-link="">
+        <img src="images/kasane-pearto.jpg" alt="Project Image">
+        <h3>Dummy</h3>
+        <p>This is a dummy project</p>
+      </div>
+    </div>
+  </section>
+  
   <section class="links">
     <h2>Find Me Online</h2>
     <a id="githubLink" href="https://github.com/felyRico" target="_blank">
       <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub Logo" class="logo">
     </a>
   </section>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
   <script src="gsap.js"></script>
